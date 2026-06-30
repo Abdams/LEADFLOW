@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claim Your 50% Discount</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/styleleads.css') }}">
+</head>
+
+<body>
+
+<div class="lead-page">
+
+    <!-- Left Side -->
+
+    <div class="hero-section">
+
+        <span class="offer-badge">
+            🔥 Limited Time Offer
+        </span>
+
+        <h1>
+            Get Your Product with
+            <span>50% OFF</span>
+        </h1>
+
+        <p>
+            Fill out the form to continue to the official website
+            and claim today's exclusive discount.
+        </p>
+
+        <ul class="benefits">
+
+            <li>✔ Secure Order Process</li>
+
+            <li>✔ Trusted by Thousands of Customers</li>
+
+            <li>✔ Fast Shipping</li>
+
+            <li>✔ Official Product Only</li>
+
+            <li>✔ Exclusive 50% Discount</li>
+
+        </ul>
+
+        <div class="testimonial">
+
+            ⭐⭐⭐⭐⭐
+
+            <p>
+                "Excellent service. My order arrived quickly and
+                everything went smoothly."
+            </p>
+
+            <span>- Verified Customer</span>
+
+        </div>
+
+    </div>
+
+    <!-- Right Side -->
+
+    <div class="form-section">
+
+        <div class="lead-card">
+
+            <h2>Claim Your Discount</h2>
+
+            <p>
+                Complete the form below.
+            </p>
+
+            <form action="{{ url_for('auth.Submit') }}" method="POST">
+
+                <div class="form-group">
+                <label>Full Name</label>
+                <input
+                    type="text"
+                    name="full_name"
+                    placeholder="Enter your full name"
+                    required
+                >
+            </div>
+
+
+            <div class="form-group">
+                <label>Phone Number</label>
+                <input
+                    type="tel"
+                    name="phone"
+                    placeholder="+..."
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label>Select Your Country</label>
+
+                <select name="country" required>
+
+                    <option value="">
+                        Select Country
+                    </option>
+
+                    <option>Colombia</option>
+                    <option>Mexico</option>
+                    <option>Peru</option>
+                    <option>Guatemala</option>
+                    <option>Chile</option>
+                    <option>Brazil</option>
+                    <option>Argentina</option>
+
+
+                    <option>United States</option>
+                    <option>Canada</option>
+                    <option>United Kingdom</option>
+                    <option>Australia</option>
+
+                    <option>Nigeria</option>
+                    <option>South Africa</option>
+                    <option>Kenya</option>
+                    <option>Ghana</option>
+                    <option>Uganda</option>
+                    <option>Tanzania</option>
+                    <option>Egypt</option>
+
+                    <option>Spain</option>
+                    <option>France</option>
+                    <option>Germany</option>
+                    <option>Italy</option>
+                    <option>Portugal</option>
+                    <option>Netherlands</option>
+
+                    <option>Indonesia</option>
+                    <option>Vietnam</option>
+                    <option>Thailand</option>
+                    <option>Malaysia</option>
+                    <option>Philippines</option>
+
+                    <option>India</option>
+                    <option>Pakistan</option>
+
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Select Product</label>
+
+                <select name="product" required>
+
+                    <option value="">
+                        Select Product
+                    </option>
+
+                    <option>Gluconat</option>
+                    <option>Vizilax</option>
+                    <option>Avital</option>
+                    <option>Virex</option>
+                    <option>Otoryx</option>
+                    <option>Fisio Forte</option>
+                    <option>Bururan</option>
+                    <option>Urodoc</option>
+                    <option>Kettochi</option>
+                    <option>Calmano</option>
+                    <option>Cortitron</option>
+                    <option>Deeplex</option>
+                    <option>Artiflex</option>
+                    <option>Urozex</option>
+
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Select Product type</label>
+
+                <select name="product type" required>
+
+                    <option value="">
+                        Select Product type
+                    </option>
+
+                    <option>Joints</option>
+                    <option>Prostatitis</option>
+                    <option>Male Urination</option>
+                    <option>Cystitis</option>
+                    <option>Enhancement</option>
+
+                </select>
+            </div>
+
+            <button
+                    class="submit-btn"
+                    type="submit">
+
+                    Claim My 50% Discount →
+
+                </button>
+
+        </form>
+
+    </div>
+
+</div>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lead Tracking Dashboard</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style-admin.css') }}">
+    
+</head>
+<body class="admin-page dashboard-page">
+    <main class="dashboard-shell">
+        <header class="dashboard-header">
+            <div>
+                <span class="login-badge">Lead Tracking</span>
+                <h1>Dashboard</h1>
+                <p>View every submitted lead from the website form.</p>
+            </div>
+            <a class="logout-link" href="{{ url_for('auth.admin_logout') }}">Logout</a>
+        </header>
+
+        <section class="stats-grid">
+            <div class="stat-card">
+                <span>Total Leads</span>
+                <strong>{{ total_leads }}</strong>
+            </div>
+            <div class="stat-card">
+                <span>New Leads</span>
+                <strong>{{ new_leads }}</strong>
+            </div>
+            <div class="stat-card">
+                <span>Products</span>
+                <strong>{{ products }}</strong>
+            </div>
+        </section>
+
+        <section class="table-card">
+            <div class="table-header">
+                <h2>Submitted Leads</h2>
+                <span>{{ total_leads }} records</span>
+            </div>
+
+            {% if leads %}
+                <div class="table-wrap">
+                    <table class="leads-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Phone</th>
+                                <th>Country</th>
+                                <th>Product</th>
+                                <th>Status</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for lead in leads %}
+                                <tr>
+                                    <td data-label="Name">{{ lead.full_name or "Unknown" }}</td>
+                                    <td data-label="Phone">{{ lead.phone or "Not provided" }}</td>
+                                    <td data-label="Country">{{ lead.country or "Not provided" }}</td>
+                                    <td data-label="Product">{{ lead.product or "Not provided" }}</td>
+                                    <td data-label="Status"><span class="status-pill">{{ lead.status or "New" }}</span></td>
+                                    <td data-label="Date">
+                                        {% if lead.created_at %}
+                                            {{ lead.created_at.strftime("%Y-%m-%d %H:%M") }}
+                                        {% else %}
+                                            Not recorded
+                                        {% endif %}
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            {% else %}
+                <div class="empty-state">
+                    <h3>No leads yet</h3>
+                    <p>New submitted leads will appear here automatically.</p>
+                </div>
+            {% endif %}
+        </section>
+    </main>
+</body>
+</html>

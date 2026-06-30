@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style3.css') }}">
+</head>
+<body class="thank-you-page">
+    <main class="thank-you-shell">
+        <section class="thank-you-card">
+            <div class="success-mark">✓</div>
+            <span class="confirmation-badge">Request Received</span>
+
+            <h1>Thank you{% if name %}, {{ name }}{% endif %}.</h1>
+
+            <p class="thank-you-message">
+                Your lead has been processed successfully. One of our verification agents will call you shortly to confirm your details{% if product %} for {{ product }}{% endif %}.
+            </p>
+
+            <div class="confirmation-panel">
+                <div>
+                    <strong>What happens next?</strong>
+                    <span>Keep your phone available. Our agent will verify your request and guide you through the next step.</span>
+                </div>
+                <div>
+                    <strong>Response time</strong>
+                    <span>Most customers receive a verification call as soon as an agent is available.</span>
+                </div>
+                <div>
+                    <strong>Global support</strong>
+                    <span>Our affiliate support process is built for customers across different countries and time zones.</span>
+                </div>
+            </div>
+
+            <a class="thank-you-button" href="{{ url_for('views.home') }}">Return to website</a>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,255 @@
+/* ===========================
+   ADMIN LOGIN PAGE
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body.admin-page{
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:linear-gradient(135deg,#06080b,#1e40af,#0f172a);
+    padding:30px;
+}
+
+/* ===========================
+   Login Container
+=========================== */
+
+.login-shell{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* ===========================
+   Login Card
+=========================== */
+
+.login-card{
+
+    width:100%;
+    max-width:430px;
+
+    background:rgba(255,255,255,.96);
+
+    backdrop-filter:blur(12px);
+
+    border-radius:20px;
+
+    padding:45px;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.25);
+
+    animation:fadeIn .5s ease;
+}
+
+/* ===========================
+   Badge
+=========================== */
+
+.login-badge{
+
+    display:inline-block;
+
+    background:#2563eb;
+
+    color:white;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    margin-bottom:18px;
+}
+
+/* ===========================
+   Heading
+=========================== */
+
+.login-card h1{
+
+    font-size:2rem;
+
+    color:#111827;
+
+    margin-bottom:10px;
+}
+
+.login-card p{
+
+    color:#6b7280;
+
+    margin-bottom:30px;
+
+    line-height:1.6;
+}
+
+/* ===========================
+   Error Box
+=========================== */
+
+.error-message{
+
+    background:#fee2e2;
+
+    color:#b91c1c;
+
+    border-left:5px solid #dc2626;
+
+    padding:14px;
+
+    border-radius:8px;
+
+    margin-bottom:25px;
+
+    font-size:14px;
+}
+
+/* ===========================
+   Form
+=========================== */
+
+.admin-form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:22px;
+}
+
+.form-group{
+
+    display:flex;
+
+    flex-direction:column;
+}
+
+.form-group label{
+
+    font-size:14px;
+
+    margin-bottom:8px;
+
+    color:#374151;
+
+    font-weight:600;
+}
+
+.form-group input{
+
+    padding:15px;
+
+    border:1px solid #d1d5db;
+
+    border-radius:10px;
+
+    font-size:15px;
+
+    transition:.3s;
+
+    outline:none;
+
+    background:#fff;
+}
+
+.form-group input:focus{
+
+    border-color:#2563eb;
+
+    box-shadow:0 0 0 4px rgba(37,99,235,.15);
+}
+
+/* ===========================
+   Button
+=========================== */
+
+.submit-btn{
+
+    margin-top:10px;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#2563eb;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.submit-btn:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-2px);
+
+    box-shadow:0 10px 25px rgba(37,99,235,.25);
+}
+
+/* ===========================
+   Animation
+=========================== */
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media(max-width:600px){
+
+.login-card{
+
+    padding:30px 25px;
+
+}
+
+.login-card h1{
+
+    font-size:1.6rem;
+
+}
+
+}

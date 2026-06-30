@@ -1,0 +1,177 @@
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .leads-table {
+        min-width: 0;
+    }
+
+    .leads-table thead {
+        display: none;
+    }
+
+    .leads-table,
+    .leads-table tbody,
+    .leads-table tr,
+    .leads-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .leads-table tr {
+        padding: 14px 0;
+        border-bottom: 1px solid #e2e8f0;
+    }
+
+    .leads-table td {
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        border-bottom: 0;
+        padding: 8px 18px;
+    }
+
+    .leads-table td::before {
+        content: attr(data-label);
+        color: #64748b;
+        font-weight: 800;
+    }
+}
+
+.thank-you-page {
+    background:
+        linear-gradient(135deg, rgba(8, 112, 71, 0.92), rgba(15, 32, 51, 0.94)),
+        url("../images/Avital.png") center/contain no-repeat fixed;
+    align-items: center;
+    justify-content: center;
+    color: #172033;
+}
+
+.thank-you-shell {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 28px;
+}
+
+.thank-you-card {
+    width: 100%;
+    max-width: 760px;
+    background: #ffffff;
+    border: 1px solid rgba(226, 232, 240, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 28px 90px rgba(0, 0, 0, 0.28);
+    box-sizing: border-box;
+    padding: 42px;
+    text-align: center;
+}
+
+.success-mark {
+    width: 72px;
+    height: 72px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #10b981;
+    color: #ffffff;
+    font-size: 38px;
+    font-weight: 900;
+    line-height: 1;
+    box-shadow: 0 16px 38px rgba(16, 185, 129, 0.35);
+}
+
+.confirmation-badge {
+    display: block;
+    width: fit-content;
+    margin: 22px auto 0;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: #e6f7ef;
+    color: #087047;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.thank-you-card h1 {
+    margin: 18px 0 12px;
+    color: #111827;
+    font-size: 38px;
+    line-height: 1.15;
+}
+
+.thank-you-message {
+    max-width: 620px;
+    margin: 0 auto 28px;
+    color: #475569;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.confirmation-panel {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin: 28px 0;
+    text-align: left;
+}
+
+.confirmation-panel div {
+    padding: 18px;
+    border-radius: 8px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+}
+
+.confirmation-panel strong,
+.confirmation-panel span {
+    display: block;
+}
+
+.confirmation-panel strong {
+    color: #111827;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.confirmation-panel span {
+    color: #64748b;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.thank-you-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 0 24px;
+    border-radius: 8px;
+    background: #172033;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+@media (max-width: 760px) {
+    .thank-you-card {
+        padding: 28px 20px;
+    }
+
+    .thank-you-card h1 {
+        font-size: 30px;
+    }
+
+    .confirmation-panel {
+        grid-template-columns: 1fr;
+    }
+}
