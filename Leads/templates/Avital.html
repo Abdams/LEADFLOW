@@ -75,16 +75,29 @@
 
             <form action="{{ url_for('auth.Submit') }}" method="POST">
 
-                 <div class="form-group">
-                <label>Full Name</label>
+                <div class="form-group">
+
+                    <label>Full Name</label>
 
                     <input
                         type="text"
                         name="full_name"
                         placeholder="John Doe"
-                        required
-                >
-            </div>
+                        required>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Phone Number</label>
+
+                    <input
+                        type="tel"
+                        name="phone"
+                        placeholder="+123..."
+                        required>
+
+                </div>
 
             <div class="form-group">
                 <label>Select Your Country</label>

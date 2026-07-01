@@ -10,354 +10,89 @@ auth = Blueprint("auth", __name__)
 
 @auth.route("/Virex", methods=["GET"])
 def Virex():
-    if request.method == "POST":
-        full_name = request.form.get("full_name")
-        phone = request.form.get("phone")
-        country = request.form.get("country")
-        product = request.form.get("product")
-
-        new_lead = Lead(
-           full_name=full_name,
-            phone=phone,
-           country=country,
-           product=product,
-           product_type=product_type
-        )
-
-        db.session.add(new_lead)
-        db.session.commit()
-
-        return redirect(url_for("views.thank_you"))
-    
     return render_template("virex.html")
 
 
 @auth.route("/Avital", methods=["GET"])
 def Avital():
-    if request.method == "POST":
-        full_name = request.form.get("full_name")
-        phone = request.form.get("phone")
-        country = request.form.get("country")
-        product = request.form.get("product")
-
-        new_lead = Lead(
-           full_name=full_name,
-            phone=phone,
-           country=country,
-           product=product,
-           product_type=product_type
-        )
-
-        db.session.add(new_lead)
-        db.session.commit()
-
-        return redirect(url_for("views.thank_you"))
-    
-    return render_template("Avital.html")
-
-@auth.route("/Fisio-forte", methods=["GET"])
-def Fisio():
-    if request.method == "POST":
-        full_name = request.form.get("full_name")
-        phone = request.form.get("phone")
-        country = request.form.get("country")
-        product = request.form.get("product")
-
-        new_lead = Lead(
-           full_name=full_name,
-            phone=phone,
-           country=country,
-           product=product,
-           product_type=product_type
-        )
-
-        db.session.add(new_lead)
-        db.session.commit()
-
-        return redirect(url_for("views.thank_you"))
-    
     return render_template("Fisio.html")
 
 @auth.route("/Gluconat", methods=["GET"])
 def Gluconat():
-    if request.method == "POST":
-        full_name = request.form.get("full_name")
-        phone = request.form.get("phone")
-        country = request.form.get("country")
-        product = request.form.get("product")
-
-        new_lead = Lead(
-           full_name=full_name,
-            phone=phone,
-           country=country,
-           product=product,
-           product_type=product_type
-        )
-
-        db.session.add(new_lead)
-        db.session.commit()
-
-        return redirect(url_for("views.thank_you"))
-    
-    return render_template("Gluconat.html")
+   return render_template("Gluconat.html")
 
 @auth.route("/Artiflex", methods=["GET"])
 def Artiflex():
-    if request.method == "POST":
-        full_name = request.form.get("full_name")
-        phone = request.form.get("phone")
-        country = request.form.get("country")
-        product = request.form.get("product")
-
-        new_lead = Lead(
-           full_name=full_name,
-            phone=phone,
-           country=country,
-           product=product,
-           product_type=product_type
-        )
-
-        db.session.add(new_lead)
-        db.session.commit()
-
-        return redirect(url_for("views.thank_you"))
-    
-    return render_template("Artiflex.html")
+   return render_template("Artiflex.html")
 
 @auth.route("/Bururan", methods=["GET"])
 def Bururan():
-    if request.method == "POST":
-        full_name = request.form.get("full_name")
-        phone = request.form.get("phone")
-        country = request.form.get("country")
-        product = request.form.get("product")
-
-        new_lead = Lead(
-           full_name=full_name,
-            phone=phone,
-           country=country,
-           product=product,
-           product_type=product_type
-        )
-
-        db.session.add(new_lead)
-        db.session.commit()
-
-        return redirect(url_for("views.thank_you"))
-    
     return render_template("Bururan.html")
 
 @auth.route("/Calmano", methods=["GET"])
-def Calmano():
-    if request.method == "POST":
-        full_name = request.form.get("full_name")
-        phone = request.form.get("phone")
-        country = request.form.get("country")
-        product = request.form.get("product")
-
-        new_lead = Lead(
-           full_name=full_name,
-            phone=phone,
-           country=country,
-           product=product,
-           product_type=product_type
-        )
-
-        db.session.add(new_lead)
-        db.session.commit()
-
-        return redirect(url_for("views.thank_you"))
-    
+def Calmano(): 
     return render_template("Calmano.html")
 
 @auth.route("/Cortitron", methods=["GET"])
 def Cortitron():
-    if request.method == "POST":
-        full_name = request.form.get("full_name")
-        phone = request.form.get("phone")
-        country = request.form.get("country")
-        product = request.form.get("product")
-
-        new_lead = Lead(
-           full_name=full_name,
-            phone=phone,
-           country=country,
-           product=product,
-           product_type=product_type
-        )
-
-        db.session.add(new_lead)
-        db.session.commit()
-
-        return redirect(url_for("views.thank_you"))
-    
     return render_template("Cortitron.html")
 
 @auth.route("/Deeplex", methods=["GET"])
 def Deeplex():
-    if request.method == "POST":
-        full_name = request.form.get("full_name")
-        phone = request.form.get("phone")
-        country = request.form.get("country")
-        product = request.form.get("product")
-
-        new_lead = Lead(
-           full_name=full_name,
-            phone=phone,
-           country=country,
-           product=product,
-           product_type=product_type
-        )
-
-        db.session.add(new_lead)
-        db.session.commit()
-
-        return redirect(url_for("views.thank_you"))
-    
     return render_template("Deeplex.html")
 
 @auth.route("/Kettochi", methods=["GET"])
 def Kettochi():
-    if request.method == "POST":
-        full_name = request.form.get("full_name")
-        phone = request.form.get("phone")
-        country = request.form.get("country")
-        product = request.form.get("product")
-
-        new_lead = Lead(
-           full_name=full_name,
-            phone=phone,
-           country=country,
-           product=product,
-           product_type=product_type
-        )
-
-        db.session.add(new_lead)
-        db.session.commit()
-
-        return redirect(url_for("views.thank_you"))
-    
     return render_template("kettochi.html")
 
 @auth.route("/Otoryx", methods=["GET"])
 def Otoryx():
-    if request.method == "POST":
-        full_name = request.form.get("full_name")
-        phone = request.form.get("phone")
-        country = request.form.get("country")
-        product = request.form.get("product")
-
-        new_lead = Lead(
-           full_name=full_name,
-            phone=phone,
-           country=country,
-           product=product,
-           product_type=product_type
-        )
-
-        db.session.add(new_lead)
-        db.session.commit()
-
-        return redirect(url_for("views.thank_you"))
-    
     return render_template("Otoryx.html")
 
 @auth.route("/Urodoc", methods=["GET"])
-def Urodoc():
-    if request.method == "POST":
-        full_name = request.form.get("full_name")
-        phone = request.form.get("phone")
-        country = request.form.get("country")
-        product = request.form.get("product")
-
-        new_lead = Lead(
-           full_name=full_name,
-            phone=phone,
-           country=country,
-           product=product,
-           product_type=product_type
-        )
-
-        db.session.add(new_lead)
-        db.session.commit()
-
-        return redirect(url_for("views.thank_you"))
-    
+def Urodoc(): 
     return render_template("Urodoc.html")
 
 @auth.route("/Urozex", methods=["GET"])
 def Urozex():
-    if request.method == "POST":
-        full_name = request.form.get("full_name")
-        phone = request.form.get("phone")
-        country = request.form.get("country")
-        product = request.form.get("product")
-
-        new_lead = Lead(
-           full_name=full_name,
-            phone=phone,
-           country=country,
-           product=product,
-           product_type=product_type
-        )
-
-        db.session.add(new_lead)
-        db.session.commit()
-
-        return redirect(url_for("views.thank_you"))
-    
     return render_template("Urozex.html")
 
-@auth.route("/Vizilax", methods=["GET"])
-def Vizilax():
-    if request.method == "POST":
-        full_name = request.form.get("full_name")
-        phone = request.form.get("phone")
-        country = request.form.get("country")
-        product = request.form.get("product")
-
-        new_lead = Lead(
-           full_name=full_name,
-            phone=phone,
-           country=country,
-           product=product,
-           product_type=product_type
-        )
-
-        db.session.add(new_lead)
-        db.session.commit()
-
-        return redirect(url_for("views.thank_you"))
-    
-    return render_template("Vizilax.html")
-
-@auth.route("/Submit", methods=["GET", "POST"])
+@auth.route("/Submit", methods=["POST"])
 def Submit():
+
     full_name = request.form.get("full_name")
     phone = request.form.get("phone")
     country = request.form.get("country")
     product = request.form.get("product")
 
+    if not full_name or not phone:
+        return "Full name and phone are required.", 400
+
     lead = Lead(
         full_name=full_name,
         phone=phone,
         country=country,
-        product=product
+        product=product,
+        source="Website",
+        status="New"
     )
 
     db.session.add(lead)
     db.session.commit()
 
-    response = requests.post(
-        Webhook_url,
-        json={
-            "full_name": full_name,
-           "phone": phone,
-           "country": country,
-           "product": product
-        }
-    )
-    print("Sent to n8n")
+    try:
+        requests.post(
+            Webhook_url,
+            json={
+                "full_name": full_name,
+                "phone": phone,
+                "country": country,
+                "product": product,
+            },
+            timeout=10
+        )
+    except Exception as e:
+        print("Webhook Error:", e)
 
     return render_template("thank_you.html")
 
