@@ -17,6 +17,10 @@ def Virex():
 def Avital():
     return render_template("Avital.html")
 
+@auth.route("/Fisio-forte", methods=["GET", "POST"])
+def Fisio():
+        return render_template("Fisio.html")
+
 @auth.route("/Gluconat", methods=["GET"])
 def Gluconat():
    return render_template("Gluconat.html")
