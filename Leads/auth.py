@@ -15,7 +15,7 @@ def Virex():
 
 @auth.route("/Avital", methods=["GET"])
 def Avital():
-    return render_template("Fisio.html")
+    return render_template("Avital.html")
 
 @auth.route("/Gluconat", methods=["GET"])
 def Gluconat():
@@ -56,6 +56,10 @@ def Urodoc():
 @auth.route("/Urozex", methods=["GET"])
 def Urozex():
     return render_template("Urozex.html")
+
+@auth.route("/Vizilax", methods=["GET"])
+def Vizilax():
+    return render_template("Vizilax.html")
 
 @auth.route("/Submit", methods=["POST"])
 def Submit():
