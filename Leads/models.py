@@ -16,6 +16,9 @@ class Lead(db.Model):
     # Product Information
     product = db.Column(db.String(120), nullable=False)
 
+    #Product type
+    product_type = db.Column(db.String(100), nullable=True)
+
     # Marketing Data
     source = db.Column(db.String(100), default="Website")
 

@@ -57,6 +57,18 @@ def Otoryx():
 def Urodoc(): 
     return render_template("Urodoc.html")
 
+@auth.route("/Joinflex", methods=["GET"])
+def Joinflex():
+    return render_template("Joinflex.html")
+
+@auth.route("/Vitaflex", methods=["GET"])
+def Vitaflex():
+    return render_template("Vitaflex.html")
+
+@auth.route("/Oxys", methods=["GET"])
+def Oxys():
+    return render_template("Oxys.html")
+
 @auth.route("/Urozex", methods=["GET"])
 def Urozex():
     return render_template("Urozex.html")
@@ -72,6 +84,7 @@ def Submit():
     phone = request.form.get("phone")
     country = request.form.get("country")
     product = request.form.get("product")
+    product_type = request.form.get("product_type")
 
     if not full_name or not phone:
         return "Full name and phone are required.", 400
@@ -81,6 +94,7 @@ def Submit():
         phone=phone,
         country=country,
         product=product,
+        product_type=product_type,
         source="Website",
         status="New"
     )
@@ -96,6 +110,7 @@ def Submit():
                 "phone": phone,
                 "country": country,
                 "product": product,
+                "product_type": product_type
             },
             timeout=10
         )
@@ -146,9 +161,8 @@ def admin_leads():
         leads=leads,
         total_leads=total_leads,
         new_leads=new_leads,
-        products=products
+        products=products,
     )
-
 
 @auth.route("/admin/logout")
 def admin_logout():
