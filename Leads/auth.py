@@ -161,7 +161,7 @@ def admin_leads():
         leads=leads,
         total_leads=total_leads,
         new_leads=new_leads,
-        products=products,
+        products=products
     )
 
 @auth.route("/admin/logout")
@@ -178,6 +178,6 @@ def check_db():
     leads = Lead.query.all()
 
     return "<br>".join(
-        f"{lead.full_name} - {lead.phone} - {lead.country} - {lead.product}"
+        f"{lead.full_name} - {lead.phone} - {lead.country} - {lead.product} - {lead.product_type}"
         for lead in leads
     )
