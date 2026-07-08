@@ -61,6 +61,18 @@ def Urodoc():
 def Joinflex():
     return render_template("Joinflex.html")
 
+@auth.route("/Furoma", methods=["GET"])
+def Furoma():
+    return render_template("Furoma.html")
+
+@auth.route("/Sustarox", methods=["GET"])
+def Sustarox():
+    return render_template("Sustarox.html")
+
+@auth.route("/Diabenol", methods=["GET"])
+def Diabenol():
+    return render_template("Diabenol.html")
+
 @auth.route("/Vitaflex", methods=["GET"])
 def Vitaflex():
     return render_template("Vitaflex.html")
