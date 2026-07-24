@@ -89,6 +89,8 @@ def Urozex():
 def Vizilax():
     return render_template("Vizilax.html")
 
+
+
 @auth.route("/Submit", methods=["POST"])
 def Submit():
 
